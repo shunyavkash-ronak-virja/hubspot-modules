@@ -11,7 +11,7 @@
   --content-bg-color: #00000087;
   --steelblue: #34699a;
   --lightsteelblue: #58a0c8;
-  --goldenrod: #ea9f3a;
+  --goldenrod: #e58f1f;
 }
 
 * {
@@ -49,7 +49,7 @@ body {
 }
 
 .primary-btn-color:hover {
-  background-color: #f4b971;
+  background-color: #ff9203;
 }
 
 a {

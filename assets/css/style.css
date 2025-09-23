@@ -45,15 +45,14 @@
 }
 
 .bg-gradient-section-content {
-  max-width: 700px;
+  max-width: 750px;
+  padding: 10px 20px;
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 16%;
 }
 
 .bg-gradient-section-content .richtext {
-  margin-bottom: 20px;
-}
-
-.bg-gradient-section-btn {
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
