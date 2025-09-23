@@ -1,0 +1,59 @@
+/*----- Nature bg section -----*/
+.left-content-hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../image/nature-demo-delivravles.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.left-content-hero-section-content-box {
+  max-width: 650px;
+  padding: 30px 40px;
+  border-radius: 32px;
+  border-bottom-left-radius: 0;
+  color: var(--white);
+  background-color: var(--content-bg-color);
+  position: absolute;
+  left: 15%;
+  top: 32%;
+}
+
+.left-content-hero-section-content-box .richtext,
+.left-content-hero-section-content-box h3 {
+  margin-bottom: 20px;
+}
+
+.left-content-hero-section-btn {
+  background-color: var(--steelblue);
+  color: var(--white);
+}
+
+.left-content-hero-section-btn:hover {
+  background-color: var(--lightsteelblue);
+}
+
+/*----- Bg gradient section -----*/
+.bg-gradient-section {
+  height: 100vh;
+  background: var(--background-color);
+  color: var(--white);
+  position: relative;
+}
+
+.bg-gradient-section-content {
+  max-width: 700px;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+
+.bg-gradient-section-content .richtext {
+  margin-bottom: 20px;
+}
+
+.bg-gradient-section-btn {
+}

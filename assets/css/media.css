@@ -1,0 +1,20 @@
+/*----- Nature bg section -----*/
+@media (max-width: 768px) {
+  .left-content-hero-section-content-box {
+    max-width: 410px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 567px) {
+  .left-content-hero-section-content-box {
+    padding: 24px;
+  }
+
+  .left-content-hero-section-content-box .richtext {
+    margin-bottom: 10px;
+  }
+}

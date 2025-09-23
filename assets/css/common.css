@@ -1,0 +1,137 @@
+:root {
+  --background-color: linear-gradient(
+    123deg,
+    rgba(128, 97, 192, 1) 0%,
+    rgba(86, 131, 185, 1) 23%,
+    rgba(29, 178, 173, 1) 75%
+  );
+  --white: #ffffff;
+  --black: #000000;
+  --midnightblue: #060b30;
+  --content-bg-color: #00000087;
+  --steelblue: #34699a;
+  --lightsteelblue: #58a0c8;
+  --goldenrod: #ea9f3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn-color {
+  background-color: var(--goldenrod);
+  color: var(--white);
+}
+
+.primary-btn-color:hover {
+  background-color: #f4b971;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+.h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+h2,
+.h2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h6,
+.h6 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  h1,
+  .h1 {
+    font-size: 48px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 40px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 32px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 36px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 34px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 30px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 26px;
+  }
+}
