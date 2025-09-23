@@ -36,7 +36,15 @@
 }
 
 @media (max-width: 567px) {
-  .bg-gradient-section-content .richtextz {
+  .bg-gradient-section-content .richtext {
     margin-top: 7px;
+  }
+}
+
+/* -------------------- Cards modules CSS -------------------- */
+/* ----- Three columns default cards section  ----- */
+@media (max-width: 767px) {
+  .three-columns-default-card-content-wrapper {
+    padding: 30px;
   }
 }
