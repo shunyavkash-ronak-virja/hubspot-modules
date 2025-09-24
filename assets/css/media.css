@@ -43,8 +43,20 @@
 
 /* -------------------- Cards modules CSS -------------------- */
 /* ----- Three columns default cards section  ----- */
+@media (max-width: 1023px) {
+  .flexible-blog-grid-card-content-wrapper {
+    padding: 34px;
+  }
+}
+
 @media (max-width: 767px) {
-  .three-columns-default-card-content-wrapper {
+  .flexible-blog-grid-card-content-wrapper {
     padding: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .flexible-blog-grid-card-content-wrapper {
+    padding: 24px;
   }
 }

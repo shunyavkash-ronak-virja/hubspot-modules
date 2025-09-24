@@ -142,18 +142,18 @@ h6,
 
 /* -------------------- Cards modules CSS -------------------- */
 /* ----- Common Grid layout ----- */
-.grid-wrapper {
+.flexible-blog-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.grid-card {
+.flexible-blog-grid-card {
   border-radius: 12px;
   overflow: hidden;
 }
 
-.card-primary-btn {
+.flexible-blog-grid-card-primary-btn {
   width: fit-content;
   display: inline-block;
   border-radius: 5px;
@@ -165,18 +165,27 @@ h6,
   cursor: pointer;
 }
 
+.text-clamp p,
+.text-clamp span,
+.text-clamp div {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 img {
   display: block;
 }
 
 @media (max-width: 1023px) {
-  .grid-wrapper {
+  .flexible-blog-grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 767px) {
-  .grid-wrapper {
+  .flexible-blog-grid-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
 }
