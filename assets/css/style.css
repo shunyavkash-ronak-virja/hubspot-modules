@@ -78,19 +78,18 @@
 
 .flexible-blog-grid-card {
   height: 550px;
+  border-radius: 12px;
+  overflow: hidden;
   background-color: var(--white);
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: all 0.3s ease;
 }
 
 .flexible-blog-grid-card:hover {
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
-}
-
-.flexible-blog-grid-wrapper:hover > .flexible-blog-grid-card:not(:hover) {
-  filter: blur(2px);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 .flexible-blog-grid-card-media {
@@ -140,6 +139,39 @@
   opacity: 0.3;
 }
 
+.flexible-blog-grid-card-btns {
+  width: fit-content;
+  height: 27px;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px 12px;
+  overflow: hidden;
+  background-color: var(--darkslateblue);
+  text-transform: uppercase;
+}
+
+.flexible-blog-grid-card-btns-first-variant {
+  opacity: 1;
+  color: var(--white);
+  transition: all 0.9s ease-out;
+}
+
+.flexible-blog-grid-card-btns-second-variant {
+  opacity: 0;
+  color: var(--white);
+  transition: all 0.9s ease-out;
+}
+
+.flexible-blog-grid-card:hover .flexible-blog-grid-card-btns-second-variant {
+  opacity: 1;
+  transform: translateY(-19px);
+}
+
+.flexible-blog-grid-card:hover .flexible-blog-grid-card-btns-first-variant {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
 .flexible-blog-grid-card-content-wrapper {
   height: 100%;
   display: flex;
@@ -169,6 +201,10 @@
   margin-bottom: 8px;
 }
 
+.flexible-blog-grid-card-content .richtext p {
+  -webkit-line-clamp: 2;
+}
+
 .flexible-blog-grid-card-content .flexible-blog-grid-card-info {
   display: flex;
   gap: 15px;
@@ -176,15 +212,38 @@
 }
 
 .flexible-blog-grid-card-content-btn {
-  display: inline-flex;
+  width: fit-content;
+  display: flex;
   align-items: center;
   gap: 2px;
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
+.flexible-blog-grid-card-content-btn svg {
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
 .flexible-blog-grid-card-content-btn:hover,
 .flexible-blog-grid-card-content-btn:hover * {
   color: var(--darkslateblue) !important;
   gap: 6px;
+}
+
+.flexible-blog-grid-card:hover .flexible-blog-grid-card-content-btn svg {
+  transform: translateX(2px);
+  opacity: 1;
+}
+
+/* ----- Small card section ----- */
+.small-card-section {
+  padding: 90px;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.small-card-section-card {
+  border-radius: 12px;
+  overflow: hidden;
 }

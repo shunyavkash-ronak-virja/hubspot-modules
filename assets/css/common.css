@@ -148,21 +148,17 @@ h6,
   gap: 20px;
 }
 
-.flexible-blog-grid-card {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
 .flexible-blog-grid-card-primary-btn {
   width: fit-content;
   display: inline-block;
   border-radius: 5px;
-  padding: 5px 12px;
+  /* padding: 5px 12px; */
   font-size: 12px;
   background-color: var(--darkslateblue);
   color: var(--white);
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .text-clamp p,
@@ -170,7 +166,6 @@ h6,
 .text-clamp div {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
