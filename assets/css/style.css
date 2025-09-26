@@ -82,9 +82,6 @@
   overflow: hidden;
   background-color: var(--white);
   position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   transition: all 0.3s ease;
 }
 
@@ -99,24 +96,25 @@
   left: 0%;
   top: 0;
   overflow: hidden;
-  transition: all 1.2s ease;
+  border-radius: 24px;
+  transition: all 0.6s ease;
 }
 
 .flexible-blog-grid-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .flexible-blog-grid-card:hover .flexible-blog-grid-card-media {
   transform: scale(1.15);
-  overflow: hidden;
 }
 
 .flexible-blog-grid-card-white-bg,
 .flexible-blog-grid-card-black-overlay {
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -124,6 +122,7 @@
 
 .flexible-blog-grid-card-white-bg {
   background-color: var(--white);
+  overflow: hidden;
   opacity: 1;
   z-index: 1;
   transition: all 0.3s ease;
@@ -147,19 +146,21 @@
   padding: 5px 12px;
   overflow: hidden;
   background-color: var(--darkslateblue);
+  color: var(--white);
   text-transform: uppercase;
 }
 
 .flexible-blog-grid-card-btns-first-variant {
   opacity: 1;
-  color: var(--white);
-  transition: all 0.9s ease-out;
 }
 
 .flexible-blog-grid-card-btns-second-variant {
   opacity: 0;
-  color: var(--white);
-  transition: all 0.9s ease-out;
+}
+
+.flexible-blog-grid-card-btns-first-variant,
+.flexible-blog-grid-card-btns-second-variant {
+  transition: all 0.6s ease-out;
 }
 
 .flexible-blog-grid-card:hover .flexible-blog-grid-card-btns-second-variant {
@@ -205,10 +206,11 @@
   -webkit-line-clamp: 2;
 }
 
-.flexible-blog-grid-card-content .flexible-blog-grid-card-info {
+.flexible-blog-grid-card-info {
   display: flex;
   gap: 15px;
-  /* margin-top: 10px; */
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .flexible-blog-grid-card-content-btn {
@@ -221,9 +223,8 @@
 }
 
 .flexible-blog-grid-card-content-btn svg {
-  transform: translateX(-10px);
   opacity: 0;
-  transition: all 0.9s ease;
+  transition: all 0.6s ease;
 }
 
 .flexible-blog-grid-card-content-btn:hover,
@@ -233,17 +234,105 @@
 }
 
 .flexible-blog-grid-card:hover .flexible-blog-grid-card-content-btn svg {
-  transform: translateX(2px);
+  transform: translateX(6px);
   opacity: 1;
 }
 
 /* ----- Small card section ----- */
-.small-card-section {
-  padding: 90px;
+.small-image-content-cards-section {
+  padding-block: 90px;
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
-.small-card-section-card {
+.small-image-content-cards-section h2 {
+  padding-block: 40px;
+  text-align: center;
+}
+
+.small-image-content-card-wrapper {
+  position: relative;
+}
+
+.small-image-content-card-media {
+  height: 259px;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.small-image-content-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+.small-image-content-card-wrapper:hover .small-image-content-card-media img {
+  transform: scale(1.1);
+}
+
+.small-image-content-card-media-btns {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--darkslateblue);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 12px;
+}
+
+.small-image-content-card-content {
+  margin-top: 30px;
+  color: var(--lightblack);
+}
+
+.small-image-content-card-content h4 {
+  font-weight: 500;
+  line-height: 1;
+}
+
+.small-image-content-card-content .richtext {
+  margin-top: 10px;
+}
+
+.small-image-content-card-content .richtext p {
+  -webkit-line-clamp: 2;
+}
+
+.small-image-content-card-learn-more-btn {
+  width: fit-content;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--lightblack);
+  transition: all 0.3s ease;
+}
+
+.small-image-content-card-learn-more-btn svg {
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.small-image-content-card-learn-more-btn:hover {
+  color: var(--darkslateblue);
+  gap: 6px;
+}
+
+.small-image-content-card-wrapper:hover
+  .small-image-content-card-learn-more-btn
+  svg {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.small-image-content-card-info {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.small-image-content-card-info * {
+  color: var(--lightblack) !important;
 }
