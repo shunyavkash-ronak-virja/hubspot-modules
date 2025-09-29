@@ -127,7 +127,6 @@
 
 .flexible-blog-grid-card-white-bg {
   background-color: #ffffff;
-  overflow: hidden;
   opacity: 1;
   z-index: 1;
   transition: all 0.3s ease;
@@ -483,10 +482,16 @@
   padding-block: 90px;
 }
 
+.square-blog-cards-section h2 {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  padding-block: 40px;
+}
+
 .square-blog-cards-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: #674ea7;
 }
 
 .square-blog-card {
@@ -500,26 +505,46 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
 }
 
 .square-blog-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.square-blog-card:hover .square-blog-card-media img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.square-blog-card-purple-bg,
+.square-blog-card-black-overlay {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .square-blog-card-purple-bg {
-  color: #674ea7;
+  background: #674ea7;
   opacity: 1;
   z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.square-blog-card:hover .square-blog-card-purple-bg {
+  opacity: 0;
 }
 
 .square-blog-card-black-overlay {
-  position: absolute;
-  color: #000000;
+  background: #000000;
   opacity: 0.3;
-  z-index: 2;
+  z-index: 0;
 }
 
 .square-blog-card-content-wrapper {
@@ -530,7 +555,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 36px;
   z-index: 3;
 }
 
@@ -541,14 +566,14 @@
   padding: 5px 12px;
   border-radius: 5px;
   overflow: hidden;
-  background-color: #674ea7;
-  color: #ffffff;
+  background-color: #b4a7d6;
+  color: #674ea7;
   text-transform: uppercase;
 }
 
 .square-blog-card-btn-first-variant,
 .square-blog-card-btn-second-variant {
-  transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease;
 }
 
 .square-blog-card-btn-second-variant {
@@ -565,16 +590,16 @@
   opacity: 1;
 }
 
-.square-blog-card-content h4 {
-  font-size: 30px;
+.square-blog-card-content h5 {
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.4;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .square-blog-card-content .richtext {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #ffffff;
 }
 
@@ -586,15 +611,19 @@
 }
 
 .square-blog-card-content-btn {
+  width: fit-content;
   display: flex;
   gap: 2px;
   align-items: center;
   color: #ffffff;
+  margin-bottom: 12px;
   transition: all 0.3s ease;
 }
 
-.square-blog-card-content-btn:hover {
+.square-blog-card-content-btn:hover,
+.square-blog-card-content-btn:hover * {
   color: #674ea7;
+  gap: 6px;
 }
 
 .square-blog-card-content-btn svg {
@@ -611,8 +640,46 @@
   display: flex;
   color: #ffffff;
   gap: 15px;
+  font-weight: 200;
 }
 
 .square-blog-card-info a {
   color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .square-blog-cards-section {
+    padding-block: 50px;
+  }
+
+  .square-blog-cards-section h2 {
+    font-size: 40px;
+    padding-block: 22px;
+  }
+
+  .square-blog-cards-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .square-blog-cards-section {
+    padding-block: 30px;
+  }
+
+  .square-blog-cards-section h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 575px) {
+  .square-blog-cards-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .square-blog-card-content-wrapper {
+    padding: 36px 22px;
+  }
 }
